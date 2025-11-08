@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+{% block title %}
+    User Login
+{% endblock %} 
+
+{% block content %}
+     <h1>User Login</h1>
+     <form class="form-width-validation" action="{% url 'users:login' %}" method="post">
+        {% csrf_token %}
+        {{ form }}
+        {% if request.GET.next %}
+            <input type="hidden" name="next" value="{{ request.GET.next }}">
+        {% endif %}
+        <button type="submit">submit</button>
+     </form>
+
+     {% if form.errors %}
+  <div style="color:red; margin-top:10px;">
+    <h4>There were some errors:</h4>
+    <ul>
+      {% for field, errors in form.errors.items %}
+        {% for error in errors %}
+          <li><strong>{{ field }}:</strong> {{ error }}</li>
+        {% endfor %}
+      {% endfor %}
+    </ul>
+  </div>
+{% endif %}
+{% endblock %}

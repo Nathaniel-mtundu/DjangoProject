@@ -1,0 +1,72 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;    
+}
+
+body {
+    min-height: 100vh;
+    display: grid;
+    font-size: 2rem;
+    background-color: black;
+    color: whitesmoke;
+}
+
+h1, p {
+    text-align: center;
+}
+
+nav {
+    padding: 1rem;
+    background-color: aquamarine;
+    color: crimson;
+    font-size: 2.3rem;
+    height: 70px;
+    
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+main {
+    flex-grow: 1;
+    display: grid;
+    place-content: center;
+}
+
+a {
+    text-decoration: none;
+    color: crimson;
+}
+
+a:hover {
+    opacity: .8s;
+}
+
+.banner {
+    display: block;
+    width: 100%;
+    max-width: 800px;
+}
+
+.logout-button {
+    font-size: 2.3rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: crimson;
+    padding: 0;
+}
+
+.logout-button:hover {
+    opacity: .8;
+}
+
+nav form {
+    display: inline;
+}
+
+.post_form {
+    height: 400px;
+    font-size: medium;
+}
