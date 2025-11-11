@@ -27,8 +27,7 @@ DEBUG = False
 
 ALLOWED_HOSTS = ['my-first-project-bzgy.onrender.com', 'localhost', '127.0.0.1']
 
-
-
+USE_X_FORWARDED_HOST = True
 
 # Application definition
 
